@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  background-color: #343a40;
+  color: white;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+div.music-container {
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.6);
+  margin: 5px;
+  padding: 10px;
+  user-select: none;
+  div.music-list {
+    height: 170px;
+    overflow: auto;
+    margin-bottom: 30px;
+    color: yellow;
+    div {
+      padding: 8px;
+      border-bottom: 2px solid lightgoldenrodyellow;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    div:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 2px 3px rgba(255, 255, 255, 0.6);
+    }
+    div:active {
+      transform: scale(0.96);
+    }
+  }
+  div.music-time {
+    text-align: center;
+  }
+  div.music-progress-bar {
+    height: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #888;
+    border-radius: 10px;
+    div.current {
+      width: 10%;
+      height: 100%;
+      border-radius: 10px;
+      background-color: lightcoral;
+    }
+  }
+  div.music-control {
+    text-align: center;
+    span {
+      font-size: 35px;
+      margin: 20px;
+      cursor: pointer;
+    }
+    span.pause {
+      display: none;
+    }
+    span:active {
+      transform: scale(0.8);
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lightcoral;
+}
