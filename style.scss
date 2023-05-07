@@ -27,12 +27,12 @@ div.music-container {
       margin-bottom: 20px;
       cursor: pointer;
     }
-    div:hover {
-      background-color: rgba(255, 255, 255, 0.5);
-      box-shadow: 0px 2px 3px rgba(255, 255, 255, 0.6);
-    }
     div:active {
       transform: scale(0.96);
+    }
+    div.active {
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 2px 3px rgba(255, 255, 255, 0.6);
     }
   }
   div.music-time {
@@ -45,14 +45,15 @@ div.music-container {
     background-color: #888;
     border-radius: 10px;
     div.current {
-      width: 10%;
+      width: 0%;
       height: 100%;
       border-radius: 10px;
       background-color: lightcoral;
     }
   }
   div.music-control {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     span {
       font-size: 35px;
       margin: 20px;
