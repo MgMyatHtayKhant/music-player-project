@@ -86,6 +86,15 @@ nextBtnTag.addEventListener("click", (e) => {
   }
 });
 
+progressBarTag.addEventListener("click", (e) => {
+  if (activeMusic) {
+    const positionCursor = e.pageX - progressBarTag.offsetLeft;
+    const percentage = positionCursor / progressBarTag.offsetWidth;
+    currentBarTag.style.width = `${percentage * 100}%`;
+    audioTag.currentTime = percentage * duration;
+  }
+});
+
 function convertTimeFormat(total) {
   const minutes = Math.floor(total / 60);
   const seconds = Math.floor(total % 60);
